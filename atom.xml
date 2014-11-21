@@ -4,7 +4,7 @@
   <title><![CDATA[cornerkick's 唠叨]]></title>
   <link href="http://cornerkick.github.io/atom.xml" rel="self"/>
   <link href="http://cornerkick.github.io/"/>
-  <updated>2014-11-21T17:12:46+08:00</updated>
+  <updated>2014-11-21T17:36:57+08:00</updated>
   <id>http://cornerkick.github.io/</id>
   <author>
     <name><![CDATA[cornerkick]]></name>
@@ -62,7 +62,7 @@
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>这些方法更为强大的是，通过传入tag，class，id，可以实现<code>filter</code>的功能。如<code>$(".some-class").parents('#some-id)</code>.</p>
+<p>这些方法更为强大的是，通过传入tag，class，id，可以实现<code>filter</code>的功能。如<code>$(".some-class").parents('#some-id')</code>.</p>
 
 <h3>小TIP</h3>
 
