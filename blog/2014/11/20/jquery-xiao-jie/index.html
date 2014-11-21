@@ -5,7 +5,7 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>cornerkick's 唠叨</title>
+  <title>JQuery 小结 - cornerkick's 唠叨</title>
   <meta name="author" content="cornerkick">
 
   
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://cornerkick.github.io">
+  <link rel="canonical" href="http://cornerkick.github.io/blog/2014/11/20/jquery-xiao-jie">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="cornerkick's 唠叨" type="application/atom+xml">
@@ -63,15 +63,12 @@
 </nav>
   <div id="main">
     <div id="content">
-      <div class="blog-index">
+      <div>
+<article class="hentry" role="article">
   
-  
-  
-    <article>
-      
   <header>
     
-      <h1 class="entry-title"><a href="/blog/2014/11/20/jquery-xiao-jie/">JQuery 小结</a></h1>
+      <h1 class="entry-title">JQuery 小结</h1>
     
     
       <p class="meta">
@@ -94,7 +91,7 @@
   </header>
 
 
-  <div class="entry-content"><h2>Introduction</h2>
+<div class="entry-content"><h2>Introduction</h2>
 
 <p><code>JQuery</code>相比于原生的<code>javascript</code>，提供了更简洁，优美的函数接口用来操作dom，并且屏蔽了大多数主流浏览器的差异性。</p>
 
@@ -160,144 +157,16 @@
 
 <p>关于处理用户的各种事件，dom元素消失，出现的各种效果，都可以参考<a href="http://www.w3schools.com/jquery/jquery_events.asp">W3school的教程</a>。不仅有简洁而直白的介绍，还有可以直接体验的例子。</p>
 </div>
-  
-  
 
 
-    </article>
-  
-  
-    <article>
+  <footer>
+    <p class="meta">
       
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2014/11/05/ruby-block-notes/">Ruby Block Notes</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
   
 
+<span class="byline author vcard">Posted by <span class="fn">cornerkick</span></span>
 
-<time datetime="2014-11-05T21:46:51+08:00" pubdate data-updated="true">Nov 5<span>th</span>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><h2>Ruby lambda vs Proc的区别</h2>
-
-<h3>只有2个区别：</h3>
-
-<ol>
-<li>lambda检查传入参赛的个数</li>
-<li>当lambda返回的时候，他会把控制权交还给调用他的函数，而Proc则会直接跳出那个方法</li>
-</ol>
-
-
-<p>代码，来自codecademy</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">def</span> <span class="nf">batman_ironman_proc</span>
-</span><span class='line'>  <span class="n">victor</span> <span class="o">=</span> <span class="no">Proc</span><span class="o">.</span><span class="n">new</span> <span class="p">{</span> <span class="k">return</span> <span class="s2">&quot;Batman will win!&quot;</span> <span class="p">}</span>
-</span><span class='line'>  <span class="n">victor</span><span class="o">.</span><span class="n">call</span>
-</span><span class='line'>  <span class="s2">&quot;Iron Man will win!&quot;</span>
-</span><span class='line'><span class="k">end</span>
-</span><span class='line'>
-</span><span class='line'><span class="nb">puts</span> <span class="n">batman_ironman_proc</span>
-</span><span class='line'>
-</span><span class='line'><span class="k">def</span> <span class="nf">batman_ironman_lambda</span>
-</span><span class='line'>  <span class="n">victor</span> <span class="o">=</span> <span class="nb">lambda</span> <span class="p">{</span> <span class="k">return</span> <span class="s2">&quot;Batman will win!&quot;</span> <span class="p">}</span>
-</span><span class='line'>  <span class="n">victor</span><span class="o">.</span><span class="n">call</span>
-</span><span class='line'>  <span class="s2">&quot;Iron Man will win!&quot;</span>
-</span><span class='line'><span class="k">end</span>
-</span><span class='line'>
-</span><span class='line'><span class="nb">puts</span> <span class="n">batman_ironman_lambda</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<h4>控制台的结果</h4>
-
-<p>Batman will win! <br>
-Iron Man will win!</p>
-
-<h2>Ruby block的小习题</h2>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">crew</span> <span class="o">=</span> <span class="p">{</span>
-</span><span class='line'>  <span class="ss">captain</span><span class="p">:</span> <span class="s2">&quot;Picard&quot;</span><span class="p">,</span>
-</span><span class='line'>  <span class="n">first_officer</span><span class="p">:</span> <span class="s2">&quot;Riker&quot;</span><span class="p">,</span>
-</span><span class='line'>  <span class="n">lt_cdr</span><span class="p">:</span> <span class="s2">&quot;Data&quot;</span><span class="p">,</span>
-</span><span class='line'>  <span class="ss">lt</span><span class="p">:</span> <span class="s2">&quot;Worf&quot;</span><span class="p">,</span>
-</span><span class='line'>  <span class="ss">ensign</span><span class="p">:</span> <span class="s2">&quot;Ro&quot;</span><span class="p">,</span>
-</span><span class='line'>  <span class="ss">counselor</span><span class="p">:</span> <span class="s2">&quot;Troi&quot;</span><span class="p">,</span>
-</span><span class='line'>  <span class="n">chief_engineer</span><span class="p">:</span> <span class="s2">&quot;LaForge&quot;</span><span class="p">,</span>
-</span><span class='line'>  <span class="ss">doctor</span><span class="p">:</span>  <span class="s2">&quot;Crusher&quot;</span>
-</span><span class='line'><span class="p">}</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>crew是各个职位和该职位的员工姓名的字典
-现在需要过滤掉名字首字母不在A－M的。<br>
-Solution：
-定义一个lambda制定了改规则，穿给crew字典
-<code>before_M = lambda { |key, value| value[0] &lt; 'M' }</code>
-应为要传给字典，所以需要两个lambda的参赛，及<code>|key, value|</code></p>
-
-<p>最后，<code>A_to_M = crew.select(&amp;before_M)</code></p>
-
-<h2>一点心得</h2>
-
-<p>ruby中的block是对逻辑或者数据动作的封装，是的程序代码的data和behavior分离，降低了代码的耦合度。通过其传入list, 或者hash的map，each等接口，发挥了函数式编程的特点，避免的大量的循环。</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
       
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2014/04/27/first-post/">First Post</a></h1>
-    
-    
-      <p class="meta">
-        
 
 
 
@@ -309,29 +178,30 @@ Solution：
   
 
 
-<time datetime="2014-04-27T13:21:42+08:00" pubdate data-updated="true">Apr 27<span>th</span>, 2014</time>
-        
-      </p>
+<time datetime="2014-11-20T16:12:25+08:00" pubdate data-updated="true">Nov 20<span>th</span>, 2014</time>
+      
+
+
+    </p>
     
-  </header>
-
-
-  <div class="entry-content"><h2>我的第一个博客</h2>
-
-<h3>Hi octopress and github, this is cornerkick speaking.</h3>
+      <div class="sharing">
+  
+  
+  
 </div>
-  
-  
 
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2014/11/05/ruby-block-notes/" title="Previous Post: Ruby Block notes">&laquo; Ruby Block notes</a>
+      
+      
+    </p>
+  </footer>
+</article>
 
-    </article>
-  
-  <div class="pagination">
-    
-    <a href="/blog/archives">Blog Archives</a>
-    
-  </div>
 </div>
+
 <aside class="sidebar">
   
     <section>
@@ -359,6 +229,7 @@ Solution：
 
   
 </aside>
+
 
     </div>
   </div>

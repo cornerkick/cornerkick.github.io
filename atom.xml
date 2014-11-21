@@ -4,7 +4,7 @@
   <title><![CDATA[cornerkick's 唠叨]]></title>
   <link href="http://cornerkick.github.io/atom.xml" rel="self"/>
   <link href="http://cornerkick.github.io/"/>
-  <updated>2014-11-06T10:04:21+08:00</updated>
+  <updated>2014-11-21T17:12:46+08:00</updated>
   <id>http://cornerkick.github.io/</id>
   <author>
     <name><![CDATA[cornerkick]]></name>
@@ -12,6 +12,79 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[JQuery 小结]]></title>
+    <link href="http://cornerkick.github.io/blog/2014/11/20/jquery-xiao-jie/"/>
+    <updated>2014-11-20T16:12:25+08:00</updated>
+    <id>http://cornerkick.github.io/blog/2014/11/20/jquery-xiao-jie</id>
+    <content type="html"><![CDATA[<h2>Introduction</h2>
+
+<p><code>JQuery</code>相比于原生的<code>javascript</code>，提供了更简洁，优美的函数接口用来操作dom，并且屏蔽了大多数主流浏览器的差异性。</p>
+
+<p>JQuery的基本思想就是通过<code>$</code>来选择dom中的元素，并在此基础提供一系列的<code>dom travesal</code>函数用来选择需要操作的元素，在通过一系列的方法来操作选中的dom元素。比如改变他的<code>attributes</code>, <code>css property</code>, 给选定的元素绑定<code>bind</code>面对给这事件的<code>callback</code>方法。</p>
+
+<h2>Part 1       find what you want to</h2>
+
+<p>JQuery为我们提供了money，哦不<code>$函数</code>来选择我们需要的dom元素。<code>$函数</code>的接受string做为输入，返回一个<code>JQuery collection</code>。</p>
+
+<p>一般的用法是，</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;tag-name&#39;</span><span class="p">)</span> <span class="err">返回页面中所有的相关</span><span class="nx">tag</span>
+</span><span class='line'><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;.class-name&#39;</span><span class="p">)</span> <span class="err">同理</span>
+</span><span class='line'><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#id-name&#39;</span><span class="p">)</span>   <span class="err">返回</span><span class="nx">id</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>一般在开发的时候，使用后两种，因为他门的信息量更大。</p>
+
+<p>dom其实就是数据结构中的<code>树结构</code>，JQuery还提供给我们一些十分简洁的方法来在树中遍历<code>traverse</code>.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="nx">parent</span><span class="p">()</span> <span class="err">返回选中元素的直接父母</span>
+</span><span class='line'><span class="nx">parents</span><span class="p">()</span> <span class="err">返回选中元素的祖先，即父母的父母</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">slibings</span><span class="p">()</span> <span class="err">返回选中元素的兄弟，级具有相同父母的元素</span>
+</span><span class='line'><span class="nx">next</span><span class="p">()</span>      <span class="err">下一个兄弟</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">children</span><span class="p">()</span> <span class="err">返回选中元素之间孩子，不包括孙子</span>
+</span><span class='line'><span class="nx">childrens</span><span class="p">()</span> <span class="err">所有后代</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>这些方法更为强大的是，通过传入tag，class，id，可以实现<code>filter</code>的功能。如<code>$(".some-class").parents('#some-id)</code>.</p>
+
+<h3>小TIP</h3>
+
+<p>使用JQuery选择具有多个class的块，如<code>&lt;div class="a b"&gt;&lt;/div&gt;</code>，则<code>$('.a.b')</code>.</p>
+
+<h2>Part 2 Manipulate what you find</h2>
+
+<p>一些常用的方法。<br>
+* <code>toggleClass(className)</code>
+* <code>attr()</code> 即是一个getter，也是一个setter。用来操纵所选dom元素的属性，如href
+*  <code>text()</code>,    <code>html()</code></p>
+
+<p>关于对dom树中增加，减少元素的方法
+* <code>remove(filter)</code>
+* <code>a.append(something)</code>, something变成了a的第一个孩子，<code>a.prepend(something)</code>, something变成了a的最后一个孩子。
+* 可以类比增加兄弟的方法<code>insertAfter()</code>, <code>insertBefore()</code></p>
+
+<h2>最后</h2>
+
+<p>关于处理用户的各种事件，dom元素消失，出现的各种效果，都可以参考<a href="http://www.w3schools.com/jquery/jquery_events.asp">W3school的教程</a>。不仅有简洁而直白的介绍，还有可以直接体验的例子。</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Ruby Block Notes]]></title>
