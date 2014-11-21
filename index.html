@@ -146,15 +146,29 @@
 
 <h2>Part 2 Manipulate what you find</h2>
 
-<p>一些常用的方法。<br>
-* <code>toggleClass(className)</code>
-* <code>attr()</code> 即是一个getter，也是一个setter。用来操纵所选dom元素的属性，如href
-*  <code>text()</code>,    <code>html()</code></p>
+<h4>一些常用的方法。</h4>
 
-<p>关于对dom树中增加，减少元素的方法
-* <code>remove(filter)</code>
-* <code>a.append(something)</code>, something变成了a的第一个孩子，<code>a.prepend(something)</code>, something变成了a的最后一个孩子。
-* 可以类比增加兄弟的方法<code>insertAfter()</code>, <code>insertBefore()</code></p>
+<ul>
+<li><code>toggleClass(someClass)</code>为如果元素没有someClass，则加上，如果有，则去除对应的someClass</li>
+<li><code>attr()</code> 即是一个getter，也是一个setter。用来操纵所选dom元素的属性，如href，src等等</li>
+<li><code>text()</code>,    <code>html()</code>获取元素<strong>内部</strong>的text或html内容</li>
+</ul>
+
+
+<h4>关于对减少元素的方法</h4>
+
+<ul>
+<li><code>remove(something)</code></li>
+</ul>
+
+
+<h4>对dom树中增加元素的方法</h4>
+
+<ul>
+<li><code>a.append(something)</code>, something变成了a的第一个孩子，<code>a.prepend(something)</code>, something变成了a的最后一个孩子。</li>
+<li>可以类比增加兄弟的方法<code>insertAfter()</code>, <code>insertBefore()</code></li>
+</ul>
+
 
 <h2>最后</h2>
 
