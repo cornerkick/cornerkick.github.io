@@ -9,7 +9,7 @@
   <meta name="author" content="cornerkick">
 
   
-  <meta name="description" content="Introduction JQuery相比于原生的javascript，提供了更简洁，优美的函数接口用来操作dom，并且屏蔽了大多数主流浏览器的差异性。 JQuery的基本思想就是通过$来选择dom中的元素，并在此基础提供一系列的dom travesal函数用来选择需要操作的元素， &hellip;">
+  <meta name="description" content="Introduction JQuery相比于原生的javascript，提供了更简洁，优美的函数接口用来操作dom，实现ajax功能。并且屏蔽了大多数主流浏览器的差异性，方法了开发。 Part 1 find what you want to JQuery为我们提供了money，哦不$ &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -93,9 +93,7 @@
 
 <div class="entry-content"><h2>Introduction</h2>
 
-<p><code>JQuery</code>相比于原生的<code>javascript</code>，提供了更简洁，优美的函数接口用来操作dom，并且屏蔽了大多数主流浏览器的差异性。</p>
-
-<p>JQuery的基本思想就是通过<code>$</code>来选择dom中的元素，并在此基础提供一系列的<code>dom travesal</code>函数用来选择需要操作的元素，在通过一系列的方法来操作选中的dom元素。比如改变他的<code>attributes</code>, <code>css property</code>, 给选定的元素绑定<code>bind</code>面对给这事件的<code>callback</code>方法。</p>
+<p><code>JQuery</code>相比于原生的<code>javascript</code>，提供了更简洁，优美的函数接口用来操作dom，实现ajax功能。并且屏蔽了大多数主流浏览器的差异性，方法了开发。</p>
 
 <h2>Part 1       find what you want to</h2>
 
@@ -108,13 +106,11 @@
 <span class='line-number'>3</span>
 </pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;tag-name&#39;</span><span class="p">)</span> <span class="err">返回页面中所有的相关</span><span class="nx">tag</span>
 </span><span class='line'><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;.class-name&#39;</span><span class="p">)</span> <span class="err">同理</span>
-</span><span class='line'><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#id-name&#39;</span><span class="p">)</span>   <span class="err">返回</span><span class="nx">id</span>
+</span><span class='line'><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#id-name&#39;</span><span class="p">)</span>
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>一般在开发的时候，使用后两种，因为他门的信息量更大。</p>
-
-<p>dom其实就是数据结构中的<code>树结构</code>，JQuery还提供给我们一些十分简洁的方法来在树中遍历<code>traverse</code>.</p>
+<p><code>dom</code>其实就是数据结构中的<code>树结构</code>，JQuery还提供给我们一些十分简洁的方法来在树中遍历<code>traverse</code>，并且这些方法的命名和接口十分规律统一。</p>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -131,13 +127,13 @@
 </span><span class='line'><span class="nx">next</span><span class="p">()</span>      <span class="err">下一个兄弟</span>
 </span><span class='line'>
 </span><span class='line'><span class="nx">children</span><span class="p">()</span> <span class="err">返回选中元素之间孩子，不包括孙子</span>
-</span><span class='line'><span class="nx">childrens</span><span class="p">()</span> <span class="err">所有后代</span>
+</span><span class='line'><span class="nx">find</span><span class="p">()</span> <span class="err">所有后代</span>
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>这些方法更为强大的是，通过传入tag，class，id，可以实现<code>filter</code>的功能。如<code>$(".some-class").parents('#some-id')</code>.</p>
+<p>其中<code>parents</code>和<code>find</code>方法可以传入class,id,tag起到<code>filter</code>的作用，及直接在返回的<code>JQuery collection</code>中找到所需元素。</p>
 
-<h3>小TIP</h3>
+<h4>小TIP</h4>
 
 <p>使用JQuery选择具有多个class的块，如<code>&lt;div class="a b"&gt;&lt;/div&gt;</code>，则<code>$('.a.b')</code>.</p>
 
@@ -147,8 +143,8 @@
 
 <ul>
 <li><code>toggleClass(someClass)</code>为如果元素没有someClass，则加上，如果有，则去除对应的someClass</li>
-<li><code>attr()</code> 即是一个getter，也是一个setter。用来操纵所选dom元素的属性，如href，src等等</li>
-<li><code>text()</code>,    <code>html()</code>获取元素<strong>内部</strong>的text或html内容</li>
+<li><code>attr(optional)</code> 在没有参数的时候是一个getter，传入参数后是一个setter。用来获取或操纵所选dom元素的属性，如href，src等等</li>
+<li><code>text(optional)</code>,    <code>html(optional)</code>获取元素<strong>内部</strong>的text或html内容，和上个方法一样，传入参数后就是设置相应的内容</li>
 </ul>
 
 
@@ -162,8 +158,8 @@
 <h4>对dom树中增加元素的方法</h4>
 
 <ul>
-<li><code>a.append(something)</code>, something变成了a的第最后孩子，<code>a.prepend(something)</code>, something变成了a的第一个孩子。</li>
-<li>可以类比增加兄弟的方法<code>insertAfter()</code>, <code>insertBefore()</code></li>
+<li><code>a.append(something)</code>: something变成了a的第最后孩子，可以类比<code>a.prepend(something)</code>, something变成了a的第一个孩子。</li>
+<li>增加兄弟的方法<code>insertAfter()</code>, <code>insertBefore()</code></li>
 </ul>
 
 
@@ -207,7 +203,7 @@
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/2014/11/05/ruby-block-notes/" title="Previous Post: Ruby Block notes">&laquo; Ruby Block notes</a>
+        <a class="basic-alignment left" href="/blog/2014/11/05/ruby-block-notes/" title="Previous Post: Lambda versus Proc">&laquo; Lambda versus Proc</a>
       
       
     </p>
