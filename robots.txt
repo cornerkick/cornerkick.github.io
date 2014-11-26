@@ -1,4 +1,4 @@
 User-agent: *
-Disallow: 
+Disallow:
 
-Sitemap: http://cornerkick.github.io/sitemap.xml 
+Sitemap: http://cornerkick.github.io/sitemap.xml
