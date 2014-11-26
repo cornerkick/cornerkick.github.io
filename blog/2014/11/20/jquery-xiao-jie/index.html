@@ -38,8 +38,6 @@
   <header role="banner"><hgroup>
   <h1><a href="/">cornerkick's 唠叨</a></h1>
   
-    <h2>so far so good</h2>
-  
 </hgroup>
 
 </header>
@@ -101,35 +99,22 @@
 
 <p>一般的用法是，</p>
 
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;tag-name&#39;</span><span class="p">)</span> <span class="err">返回页面中所有的相关</span><span class="nx">tag</span>
-</span><span class='line'><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;.class-name&#39;</span><span class="p">)</span> <span class="err">同理</span>
-</span><span class='line'><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#id-name&#39;</span><span class="p">)</span>
-</span></code></pre></td></tr></table></div></figure>
-
+<pre><code>$('tag-name') 返回页面中所有的相关tag
+$('.class-name') 同理
+$('#id-name')   
+</code></pre>
 
 <p><code>dom</code>其实就是数据结构中的<code>树结构</code>，JQuery还提供给我们一些十分简洁的方法来在树中遍历<code>traverse</code>，并且这些方法的命名和接口十分规律统一。</p>
 
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="nx">parent</span><span class="p">()</span> <span class="err">返回选中元素的直接父母</span>
-</span><span class='line'><span class="nx">parents</span><span class="p">()</span> <span class="err">返回选中元素的祖先，即父母的父母</span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">slibings</span><span class="p">()</span> <span class="err">返回选中元素的兄弟，级具有相同父母的元素</span>
-</span><span class='line'><span class="nx">next</span><span class="p">()</span>      <span class="err">下一个兄弟</span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">children</span><span class="p">()</span> <span class="err">返回选中元素之间孩子，不包括孙子</span>
-</span><span class='line'><span class="nx">find</span><span class="p">()</span> <span class="err">所有后代</span>
-</span></code></pre></td></tr></table></div></figure>
+<pre><code>parent() 返回选中元素的直接父母
+parents() 返回选中元素的祖先，即父母的父母
 
+slibings() 返回选中元素的兄弟，级具有相同父母的元素
+next()       下一个兄弟
+
+children() 返回选中元素之间孩子，不包括孙子
+find() 所有后代
+</code></pre>
 
 <p>其中<code>parents</code>和<code>find</code>方法可以传入class,id,tag起到<code>filter</code>的作用，及直接在返回的<code>JQuery collection</code>中找到所需元素。</p>
 
