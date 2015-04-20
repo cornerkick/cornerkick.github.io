@@ -4,7 +4,7 @@
 
 url: http://cornerkick.github.io
 title: cornerkick's 唠叨
-subtitle: so far so good
+subtitle: 
 author: cornerkick
 simple_search: https://www.google.com/search
 description:
@@ -68,6 +68,12 @@ github_repo_count: 0
 github_show_profile_link: true
 github_skip_forks: true
 
+
+
+default_asides: [] 
+
+sidebar: collapse
+
 ## Modifed for the GFW
 # # Twitter
 # twitter_user:
@@ -90,9 +96,9 @@ github_skip_forks: true
 # delicious_user:
 # delicious_count: 3
 
-# # Disqus Comments
-# disqus_short_name:
-# disqus_show_comment_count: false
+# Disqus Comments
+disqus_short_name: cornerkicker-blog
+disqus_show_comment_count: true
 
 # # Google Analytics
 # google_analytics_tracking_id:

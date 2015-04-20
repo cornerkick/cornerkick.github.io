@@ -6,6 +6,6 @@ comments: true
 categories: 
 ---
 
-##我的第一个博客
+#我的第一个博客
 
-###Hi octopress and github, this is cornerkick speaking.
+##Hi octopress and github, this is cornerkick speaking.
