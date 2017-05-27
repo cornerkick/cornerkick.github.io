@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Life is like cornerkick]]></title>
+  <title><![CDATA[Cornerkick Blog]]></title>
   <link href="http://cornerkick.github.io/atom.xml" rel="self"/>
   <link href="http://cornerkick.github.io/"/>
-  <updated>2017-05-27T15:01:32+08:00</updated>
+  <updated>2017-05-27T15:34:22+08:00</updated>
   <id>http://cornerkick.github.io/</id>
   <author>
     <name><![CDATA[Cornerkick]]></name>
