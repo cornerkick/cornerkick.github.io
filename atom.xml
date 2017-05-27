@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Cornerkick Blog]]></title>
-  <link href="http://cornerkick.github.io/atom.xml" rel="self"/>
-  <link href="http://cornerkick.github.io/"/>
-  <updated>2017-05-27T15:34:22+08:00</updated>
-  <id>http://cornerkick.github.io/</id>
+  <title><![CDATA[Blog]]></title>
+  <link href="https://cornerkick.github.io/atom.xml" rel="self"/>
+  <link href="https://cornerkick.github.io/"/>
+  <updated>2017-05-27T20:45:02+08:00</updated>
+  <id>https://cornerkick.github.io/</id>
   <author>
-    <name><![CDATA[Cornerkick]]></name>
+    <name><![CDATA[cornerkick]]></name>
     
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
