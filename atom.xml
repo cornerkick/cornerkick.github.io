@@ -1,27 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[cornerkick's 唠叨]]></title>
+  <title><![CDATA[Life is like cornerkick]]></title>
   <link href="http://cornerkick.github.io/atom.xml" rel="self"/>
   <link href="http://cornerkick.github.io/"/>
-  <updated>2015-04-20T23:19:21+08:00</updated>
+  <updated>2017-05-27T15:01:32+08:00</updated>
   <id>http://cornerkick.github.io/</id>
   <author>
-    <name><![CDATA[cornerkick]]></name>
+    <name><![CDATA[Cornerkick]]></name>
     
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
-  
-  <entry>
-    <title type="html"><![CDATA[First Post]]></title>
-    <link href="http://cornerkick.github.io/blog/2014/04/27/first-post/"/>
-    <updated>2014-04-27T13:21:42+08:00</updated>
-    <id>http://cornerkick.github.io/blog/2014/04/27/first-post</id>
-    <content type="html"><![CDATA[<h1>我的第一个博客</h1>
-
-<h2>Hi octopress and github, this is cornerkick speaking.</h2>
-]]></content>
-  </entry>
   
 </feed>
